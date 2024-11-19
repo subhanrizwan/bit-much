@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang=en>
+
+<head>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <meta http-equiv=Cache-Control content="no-cache, no-store, must-revalidate">
+    <meta http-equiv=Pragma content=no-cache>
+    <meta http-equiv=Expires content=0>
+    <title>A Bit Much | Home</title>
+    <meta name="description"
+        content="Live security camera monitoring from A Bit Much enhances safety and productivity. Real-time surveillance tailored to your needs.">
+    <link rel=icon type=image/x-icon href=./assets/images/logo.webp> <link
+        href=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css rel=stylesheet
+        integrity=sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC crossorigin=anonymous>
+    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css> <link rel=stylesheet
+        href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin=anonymous referrerpolicy=no-referrer>
+    <link rel=stylesheet href=./assets/css/style.css> <script
+        src=https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js
+        integrity=sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM crossorigin=anonymous>
+    </script>
+    <script src=https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js> </script> <script
+        src=./assets/js/home-canvas.js> </script> <script src=https://unpkg.com/gsap@3/dist/gsap.min.js> </script>
+        <script src=https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js> </script> <script
+        src=./assets/script/scroll-timeline.js> </script> <script src=./assets/js/sectionIn.js> </script> <script
+        src="https://player.vimeo.com/api/player.js"></script>
+</head>
+
+<body>
+    <div class=video-position>
+        <video autoplay loop muted playsinline id=myVideo preload=metadata loading=lazy>
+            <source src="./assets/video/Server_Anim5.webm" type=video/webm> </video> </div> <div
+                class=mil-progress-track>
+            <div class=mil-progress></div>
+    </div>
+    <div>
+        <div class=navbar-postion id=navbar>
+            <nav class="navbar navbar-expand-lg">
+                <div class=container-fluid>
+                    <div class="d-flex align-items-center justify-content-between w-100 ps-2 pe-2">
+                        <div class=header-logo-text>
+                            <a href=#>
+                                <h1 class=mb-0>A Bit Much</h1>
+                            </a>
+                        </div>
+                        <div class=hamburger-menu id=hamburger-menu>
+                            <div class=menu-bar1></div>
+                            <div class=menu-bar2></div>
+                            <div class=menu-bar3></div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class=box2 id=box2>
+            <div class="container h-100">
+                <div class="d-flex align-items-center pt-5 h-100 logo-position">
+                    <div class=w-100>
+                        <div class="row align-items-center" style="position: relative; z-index: 2;">
+                            <div class="col-lg-5">
+                                <div class="navlink-box" >
+                                    <ul class="navlink-ul">
+                                        <li><a href="home" class="orange-active"><span class="dot"></span>
+                                                Homepage</a></li>
+                                        <li><a href="About-Us"><span class="dot"></span> About Us</a>
+                                        </li>
+                                        <li>
+                                            <a class="secon-btn" id="secon-btn-id"><span class="dot"></span>
+                                                Services</a>
+                                            <div>
+                                                <ul id="ul-id">
+                                                    <li class="hover-item"
+                                                        data-img="./assets/images/link-img/link1.webp">
+                                                        <a href="home">AI</a>
+                                                    </li>
+                                                    <li id="secon-btn-id2">
+                                                        <a data-img="./assets/images/link-img/link2.webp"
+                                                            class="hover-item" href="IT-Support" class="secon-btn">IT
+                                                            SERVICES</a>
+                                                        <div>
+                                                            <ul id="ul-id2">
+                                                                <li data-img="./assets/images/link-img/link3.webp"
+                                                                    class="hover-item"><a
+                                                                        href="Network-Security">NETWORK
+                                                                        SECURITY</a></li>
+                                                                <li data-img="./assets/images/link-img/link4.webp"
+                                                                    class="hover-item"><a href="IT-Support">IT
+                                                                        SUPPORT</a></li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                    <li id="secon-btn-id3">
+                                                        <a data-img="./assets/images/link-img/link5.webp"
+                                                            class="hover-item" href="Data-Center" class="secon-btn">DATA
+                                                            CENTER
+                                                            SUPPORT</a>
+                                                        <div>
+                                                            <ul id="ul-id3">
+                                                                <li class="hover-item"
+                                                                    data-img="./assets/images/link-img/link6.webp">
+                                                                    <a href="Hardware-Software">SOFTWARE
+                                                                        AND Hardware MANAGEMENT</a>
+                                                                </li>
+
+                                                                <li class="hover-item"
+                                                                    data-img="./assets/images/link-img/link7.webp">
+                                                                    <a href="Data-Recovery">DATA
+                                                                        BACKUP AND RECOVERY</a></li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                    <li class="hover-item"
+                                                        data-img="./assets/images/link-img/link8.webp">
+                                                        <a href="nist-fedramp">NIST AND FEDRAMP COMPLIANCE SERVICES</a>
+                                                    </li>
+                                                    <li class="hover-item"
+                                                        data-img="./assets/images/link-img/link9.webp">
+                                                        <a href="Software-Development">SOFTWARE
+                                                            DEVELOPMENT</a>
+                                                    </li>
+                                                    <li class="hover-item"
+                                                        data-img="./assets/images/link-img/link10.webp">
+                                                        <a href="web-development">WEB
+                                                            DEVELOPMENT</a>
+                                                    </li>
+                                                    <li class="hover-item"
+                                                        data-img="./assets/images/link-img/link11.webp">
+                                                        <a href="camera-monitoring">CAMERA
+                                                            MONITORING</a>
+                                                    </li>
+
+                                                    <li class="hover-item"
+                                                        data-img="./assets/images/link-img/link12.webp">
+                                                        <a href="3danimation">3D ANIMATION</a></li>
+                                                    <li class="hover-item"
+                                                        data-img="./assets/images/link-img/link13.webp">
+                                                        <a href="2danimation">2D ART DESIGN</a></li>
+
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li><a href="blog"><span class="dot"></span> Blog
+                                            </a></li>
+                                        <li><a href="contact"><span class="dot"></span> Contact
+                                                Us</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 mobile-display-none">
+                                <div class="hover-image">
+                                    <img id="hoverImage" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=viewport>
+        <div id=scroll-container class=scroll-container>
+            <section class="first-banner position-r-index-1-black">
+                <div class=home-section-back-canvas>
+                    <canvas id=starfield></canvas>
+                </div>
+                <div class=navbar-height></div>
+                <div class="container h-100">
+                    <div class=text-container>
+                        <div class="row align-items-center justify-content-between">
+                            <div class=col-lg-7>
+                                <div class=home-banner-text>
+                                    <h1>Revolutionize <span class=text-light>Your</span>
+                                        <br> WorkFlow <span class=text-light>Today</span>
+                                    </h1>
+                                    <p>Elevate your business operations with<br>
+                                        our broad range of services that ensure success.</p>
+                                    <div class=mt-4>
+                                        <a href=About-Us class=yellow-btn>
+                                            <span>What we do</span>
+                                            <i class="fas fa-arrow-circle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=col-lg-5>
+                                <div class=rocket-img>
+                                    <img src=./assets/images/rocket.svg alt="">
+                                </div>
+                                <div class=surfaces></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class=wrapper>
+                <div class=content>
+                    <section class="section hero">
+                        <video autoplay muted loop id=myVideo preload=metadata loading=lazy>
+                            <source src=./assets/video/main1.webm type=video/mp4> </video> </section> </div> <div
+                                class=image-container>
+                            <img class="inner-image defult-img" src=./assets/images/wrapper-img.webp alt=image>
+                            <img class="inner-image mobile-img" src=./assets/images/image.webp alt=image>
+                </div>
+            </div>
+            <section id=about class="pt4 pb-2">
+                <div class=container>
+                    <div class="mt-2 d-flex flex-column align-items-center">
+                        <div class="what-we-heading d-flex align-items-center">
+                            <div class="mobile-none-btn btn-img me-4">
+                                <img src=./assets/images/btn-img.webp alt=team>
+                            </div>
+                            <h2>What <span class=text-light>We Offer</span></h2>
+                        </div>
+                    </div>
+                    <div class=magic-slider-width>
+                        <div class="swiper gallery-thumbs">
+                            <div class="swiper-wrapper justify-content-center">
+                                <div class=swiper-slide>
+                                    <div class=rounded-img-btn>
+                                        <img src=./assets/images/customers/3.webp alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mt-4">
+                                    <div class=rounded-img-btn>
+                                        <img src=./inner-assets/img/photo/datacenter1.webp alt="">
+                                    </div>
+                                </div>
+                                <div class=swiper-slide>
+                                    <div class=rounded-img-btn>
+                                        <img src=./inner-assets/img/photo/risk-assessment.webp alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mt-4">
+                                    <div class=rounded-img-btn>
+                                        <img src=./inner-assets/img/photo/software1.webp alt="">
+                                    </div>
+                                </div>
+                                <div class=swiper-slide>
+                                    <div class=rounded-img-btn>
+                                        <img src=./inner-assets/img/photo/software3.webp alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mt-4">
+                                    <div class=rounded-img-btn>
+                                        <img src=./assets/images/customers/5.webp alt="">
+                                    </div>
+                                </div>
+                                <div class=swiper-slide>
+                                    <div class=rounded-img-btn>
+                                        <img src=./assets/images/customers/1.webp alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide mt-4">
+                                    <div class=rounded-img-btn>
+                                        <img src=./assets/images/customers/2.webp alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper gallery-top mt-5">
+                            <div class=swiper-wrapper>
+                                <div class=swiper-slide>
+                                    <a class=slider-anchartag href=IT-Support>
+                                        <div class=slider-inner-text>
+                                            <h5>IT Services</h5>
+                                            <p>
+                                                Amplify your business operations with our advanced and reliable IT
+                                                solutions tailored to your needs. From network security and remote
+                                                troubleshooting to IT consulting and managed services, we ensure optimal
+                                                performance, scalability, and efficiency, allowing you to focus on
+                                                driving innovation, productivity, and growth.
+                                            </p>
+                                            <h6>Read More...</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=swiper-slide>
+                                    <a class=slider-anchartag href=Data-Center>
+                                        <div class=slider-inner-text>
+                                            <h5>Data Center Support</h5>
+                                            <p>
+                                                From hardware maintenance and upgrades to disaster recovery planning and
+                                                24/7 monitoring, our team of certified experts ensures the reliability,
+                                                availability, and performance of your data center. We also provide
+                                                comprehensive hardware degaussing, decommissioning, end-of-life cycle
+                                                management, and hardware recycling and e-waste management, allowing you
+                                                to focus on stimulating innovation and delivering value to your
+                                                customers.
+                                            </p>
+                                            <h6>Read More...</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=swiper-slide>
+                                    <a class=slider-anchartag href=nist-fedramp>
+                                        <div class=slider-inner-text>
+                                            <h5>NIST and FedRAMP Compliance Services</h5>
+                                            <p>
+                                                Achieve and maintain compliance with NIST and FedRAMP standards through
+                                                our expert services. We help you navigate the complexities of these
+                                                stringent requirements, ensuring your systems and processes meet the
+                                                highest standards for security and data protection. Our comprehensive
+                                                approach includes gap analysis, risk assessments, documentation,
+                                                continuous monitoring, and support for audit readiness, ensuring your
+                                                organization remains compliant and secure.
+                                            </p>
+                                            <h6>Read More...</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=swiper-slide>
+                                    <a class=slider-anchartag href=Software-Development>
+                                        <div class=slider-inner-text>
+                                            <h5>Software Development</h5>
+                                            <p>
+                                                Our expert agile development approach ensures rapid delivery of
+                                                high-quality software services that align with your goals and adapt to
+                                                evolving market demands, empowering you to stay ahead of the
+                                                competition.
+                                            </p>
+                                            <h6>Read More...</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=swiper-slide>
+                                    <a class=slider-anchartag href=web-development>
+                                        <div class=slider-inner-text>
+                                            <h5>Web Development</h5>
+                                            <p>
+                                                We are committed to transforming businesses into digital powerhouses
+                                                with user-centric designs, seamless functionality, and immersive digital
+                                                experiences. Whether it's a sleek corporate website, an intuitive
+                                                e-commerce platform, or a dynamic web application, we provide web
+                                                excellence that enhances brand visibility and boosts conversions.
+                                            </p>
+                                            <h6>Read More...</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=swiper-slide>
+                                    <a class=slider-anchartag href=camera-monitoring>
+                                        <div class=slider-inner-text>
+                                            <h5>Camera Monitoring Services</h5>
+                                            <p>
+                                                Ensure the safety of your assets with our AI-powered camera monitoring
+                                                services. Our advanced surveillance solutions provide real-time
+                                                monitoring, recording, and analysis capabilities, enabling proactive
+                                                threat detection and rapid response for your business. Secure your peace
+                                                of mind and stay one step ahead with our next-gen camera monitoring
+                                                services.
+                                            </p>
+                                            <h6>Read More...</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=swiper-slide>
+                                    <a class=slider-anchartag href=3danimation>
+                                        <div class=slider-inner-text>
+                                            <h5>3D Animation</h5>
+                                            <p>
+                                                Welcome to Our 3D Animation Services. We specialize in creating
+                                                captivating 3D animations that bring your ideas to life with creativity
+                                                and precision. Whether you're in film, gaming, advertising, or
+                                                educational sectors, our team is committed to delivering exceptional
+                                                visual experiences that engage and inspire.
+                                            </p>
+                                            <h6>Read More...</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class=swiper-slide>
+                                    <a class=slider-anchartag href=2danimation>
+                                        <div class=slider-inner-text>
+                                            <h5>2D Art Design</h5>
+                                            <p>
+                                                Welcome to Our 2D Art Design Services. At A Bit Much Co., we specialize
+                                                in creating captivating 2D animations that bring your ideas to life with
+                                                creativity and precision. Whether you're in need of animations for film,
+                                                advertising, gaming, or educational purposes, our team is dedicated to
+                                                delivering exceptional visual experiences that engage and inspire.
+                                            </p>
+                                            <h6>Read More...</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class=cstm-swiper-btn-prev>
+                                <i class="far fa-arrow-alt-circle-left"></i>
+                            </div>
+                            <div class=cstm-swiper-btn-next>
+                                <i class="far fa-arrow-alt-circle-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id=about class="position-r-index-1-black sections parallax pt4 pb5">
+                <div class=video-position2>
+                    <video autoplay muted loop id=myVideo preload=metadata loading=lazy>
+                        <source src=./assets/video/background-video.webm type=video/mp4> </video> </div> <div
+                            class=container>
+                        <div class="row justify-content-between align-items-center">
+                            <div class=col-lg-5>
+                                <div class=about-content>
+                                    <h2>Who <br> <span class=text-light>We </span>Are</h2>
+                                    <p class=mt1> At A Bit Much, we specialize in a diverse array of services designed
+                                        to
+                                        amplify your business operations and elevate your digital presence.</p>
+                                    <p>Our expertise spans across IT services, software development, data center
+                                        support,
+                                        and web development. Additionally, we offer exceptional animations, VFX, and
+                                        motion
+                                        graphics, as well as cutting-edge camera monitoring services.</p>
+                                    <div>
+                                        <a href=About-Us class="yellow-btn mt2">
+                                            <span>Read more</span>
+                                            <i class="fas fa-arrow-circle-right"></i>
+                                        </a>
+                                    </div>
+                                    <h4 class=delivery-text>
+                                        <span class=text-light>We believe</span> in delivering <br><span
+                                            class=text-light>exceptional</span>
+                                        results.
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class=col-lg-6>
+                                <div class=about-content>
+                                    <div class=row>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class=about-img>
+                                                <img src=./assets/images/rigger.webp alt="">
+                                                <div class=middle>
+                                                    <div class=overlay-text>
+                                                        <div class=w-100>
+                                                            <ul>
+                                                                <li><a href=https://www.youtube.com/@UNFOLDXO
+                                                                        target=_blank class=social-icon> <i
+                                                                            class="fab fa-youtube"></i></a></li>
+                                                                <li><a href=https://www.linkedin.com/company/a-bit-much-co/
+                                                                        target=_blank class=social-icon> <i
+                                                                            class="fab fa-linkedin"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class=mt-4>
+                                                <h6></h6>
+                                            </div>
+                                            <div class="about-img mt-4">
+                                                <img src=./assets/images/pirate.webp alt="">
+                                                <div class=middle>
+                                                    <div class=overlay-text>
+                                                        <div class=w-100>
+                                                            <ul>
+                                                                <li><a href=https://www.youtube.com/@UNFOLDXO
+                                                                        target=_blank class=social-icon> <i
+                                                                            class="fab fa-youtube"></i></a></li>
+                                                                <li><a href=https://www.linkedin.com/company/a-bit-much-co/
+                                                                        target=_blank class=social-icon> <i
+                                                                            class="fab fa-linkedin"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </section>
+            <footer>
+                <section class="position-r-index-1-black footer-paddingtop">
+                    <div class=container>
+                        <div class=row>
+                            <div class=col-lg-5>
+                                <div class=cstm-logo-size>
+                                    <h3>
+                                        Redefine What's Possible with <br> A Bit Much...
+                                    </h3>
+                                </div>
+                                <div>
+                                    <a href=contact class=yellow-btn>
+                                        <span>Connect with us now!</span>
+                                        <i class="fas fa-arrow-circle-right"></i>
+                                    </a>
+                                </div>
+                                <div class="footer-links mt2">
+                                    <ul class="d-flex align-items-center socail-links-box">
+                                        <li><a href=https://www.youtube.com/@UNFOLDXO target=_blank class=social-icon><i
+                                                    class="fab fa-youtube"></i></a></li>
+                                        <li><a href=https://www.linkedin.com/company/a-bit-much-co/ target=_blank
+                                                class=social-icon><i class="fab fa-linkedin-in"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class=col-lg-4>
+                                <div class=footer-links>
+                                    <ul>
+                                        <li><a href=Privacy-Policy>Privacy Policy</a></li>
+                                        <li><a href=Terms>Terms and conditions</a>
+                                        </li>
+                                        <li><a href=Faq>FAQs</a></li>
+                                        <li><a href=blog>Blog</a></li>
+                                        <li><a href=careers>Careers</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class=col-lg-3>
+                                <div class=footer-links>
+                                    <ul>
+                                        <li><a href=tel:5713258282><i class="fas fa-phone-alt me-2"></i>
+                                                (571)-325-8282</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 mt3">
+                                <div class="cpy-right text-center">
+                                    <a href=home>
+                                        <p>© Copyright 2024 - All Rights Reserved.</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </footer>
+        </div>
+    </div>
+    <script src=./assets/js/main.js> </script> <script src=./assets/js/code.js> </script> <script>
+        var iframe = document.getElementById('vimeo-player');
+        var player = new Vimeo.Player(iframe);
+
+        player.setVolume(0); // Mute the video
+        player.play().catch(function (error) {
+            console.error('Error occurred while trying to autoplay:', error);
+        });
+    </script>
+
+</body>
+
+</html>

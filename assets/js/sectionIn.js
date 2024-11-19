@@ -1,0 +1,1 @@
+gsap.registerPlugin(ScrollTrigger),window.addEventListener("load",()=>{gsap.timeline({scrollTrigger:{trigger:".wrapper",start:"top top",end:"+=150%",pin:!0,scrub:!0}}).to(".inner-image",{scale:2,z:350,transformOrigin:"center center",ease:"power1.inOut"}).to(".section.hero",{scale:1,transformOrigin:"center center",ease:"power1.inOut"},"<")});
