@@ -28,15 +28,24 @@
     <link rel="stylesheet" href="./inner-assets/css/plugins/fancybox.min.css">
     <!-- ashley scss -->
     <link rel="stylesheet" href="./inner-assets/css/style.css">
+
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <!-- page name -->
     <title>A Bit Much | Careers</title>
     <style>
         body {
+            position: relative;
+
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
         }
 
-
+        #slider-btn {
+            padding: 0 15px 0 25px;
+        }
 
         .mil-menu-btn span:before,
         .mil-menu-btn span:after {
@@ -66,6 +75,10 @@
             color: #fff;
         }
 
+        #swupMain {
+            background-color: #000;
+        }
+
         /* swipper slider*/
         .swiper {
             width: 100%;
@@ -88,9 +101,6 @@
             object-fit: cover;
         }
 
-        #swupMain {
-            background-color: gray;
-        }
 
         .child1 {
             height: 1400px;
@@ -103,7 +113,6 @@
         }
 
         .container {
-
             max-width: 1800px;
         }
 
@@ -117,7 +126,7 @@
         .swiper-slide:nth-child(7),
         .swiper-slide:nth-child(9) {
             cursor: pointer;
-            margin-top: 2.5rem;
+            margin-top: 5.5rem;
             width: 55%;
             height: 200px !important;
             border-radius: 10px;
@@ -131,7 +140,7 @@
         .swiper-slide:nth-child(6),
         .swiper-slide:nth-child(8) {
             cursor: pointer;
-            margin-top: 2.5rem;
+            margin-top: 5.5rem;
             margin-left: 350px;
             width: 55%;
             height: 200px !important;
@@ -147,7 +156,7 @@
 
         .swiper-wrapper1 {
             animation-play-state: running;
-            animation: linearScroll 15s linear infinite;
+            animation: linearScroll 25s linear infinite;
         }
 
         @keyframes linearScroll {
@@ -167,26 +176,61 @@
         }
 
 
-        /* slider 2 */
-        .swiper2 {
-            width: 100%;
+        .container1 {
+            max-width: 100%;
             height: 100%;
+            background: #000;
+            padding-bottom: 120px;
+            padding-top: 120px;
         }
 
-        .swiper-slide1 {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
+        .center {
+            display: flex;
+            align-items: center;
+            max-width: 90%;
+            height: 600px;
+            margin: 0 auto;
+        }
+
+        .slick-slide {
+            margin: 0 100px;
+            /* Add space around each card */
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: #fff;
+            height: 580px;
+            border-radius: 10px;
+            background: transparent;
+            border: 1px solid #fff;
+            outline: none;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
         }
 
-        .swiper-slide1 img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .slick-slide div {
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .slick-prev,
+        .slick-next {
+            z-index: 1;
+            /* background-color: rgba(0, 0, 0, 0.5); */
+            color: white;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+
+        /* slider content */
+        h3 strong {
+            color: gray;
+        }
+
+        .description p {
+            padding-top: 200px;
         }
     </style>
 </head>
@@ -375,7 +419,10 @@
                             <div class="child1 col-6 justify-content-end">
                                 <div class=" swiper mySwiper">
                                     <div class="swiper-wrapper1">
-                                        <div class="swiper-slide">Slide 1</div>
+                                        <div class="swiper-slide">
+                                            Slider1
+
+                                        </div>
                                         <div class="swiper-slide">Slide 2</div>
                                         <div class="swiper-slide">Slide 3</div>
                                         <div class="swiper-slide">Slide 4</div>
@@ -389,8 +436,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="container">
+                    <!-- </div> -->
+                    <!-- <div class="container">
                     <div class="row mt-5 p-5">
                         <div class="col-12 ">
                             <div class="title p-4" style="text-align: center;">
@@ -415,7 +462,118 @@
 
                         </div>
                     </div>
+                </div> -->
+
                 </div>
+                <div class="container1 ">
+                    <div class="row mt-5 p-5">
+                        <div class="col-12 ">
+                            <div class="title p-5" style="text-align: center;">
+                                <h1>Featured jobs</h1>
+                            </div>
+
+                            <div class="center">
+                                <div>
+                                    <div class="mil-up">
+                                        <a href="contact.html" id="slider-btn"
+                                            class="mil-button mil-arrow-place "><span>Explore all
+                                                jobs</span>
+
+                                        </a>
+                                    </div>
+
+                                    <h3 style="color: #fff;">
+                                        US Agency <strong>Development Lead</strong>
+                                    </h3>
+                                    <div class="description">
+                                        <p>Pakistan</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="mil-up">
+                                        <a href="contact.html" id="slider-btn"
+                                            class="mil-button mil-arrow-place "><span>Explore all
+                                                jobs</span>
+
+                                        </a>
+                                    </div>
+                                    <h3 style="color: #fff;">
+                                        US Agency <strong>Development Lead</strong>
+
+                                    </h3>
+                                    <div class="description">
+                                        <p>Pakistan</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="mil-up">
+                                        <a href="contact.html" id="slider-btn"
+                                            class="mil-button mil-arrow-place "><span>Explore all
+                                                jobs</span>
+
+                                        </a>
+                                    </div>
+                                    <h3 style="color: #fff;">
+                                        US Agency <strong>Development Lead</strong>
+
+                                    </h3>
+                                    <div class="description">
+                                        <p>Pakistan</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="mil-up">
+                                        <a href="contact.html" id="slider-btn"
+                                            class="mil-button mil-arrow-place "><span>Explore all
+                                                jobs</span>
+
+                                        </a>
+                                    </div>
+                                    <h3 style="color: #fff;">
+                                        US Agency <strong>Development Lead</strong>
+
+                                    </h3>
+                                    <div class="description">
+                                        <p>Pakistan</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="mil-up">
+                                        <a href="contact.html" id="slider-btn"
+                                            class="mil-button mil-arrow-place "><span>Explore all
+                                                jobs</span>
+
+                                        </a>
+                                    </div>
+                                    <h3 style="color: #fff;">
+                                        US Agency <strong>Development Lead</strong>
+
+                                    </h3>
+                                    <div class="description">
+                                        <p>Pakistan</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="mil-up">
+                                        <a href="contact.html" id="slider-btn"
+                                            class="mil-button mil-arrow-place "><span>Explore all
+                                                jobs</span>
+
+                                        </a>
+                                    </div>
+                                    <h3 style="color: #fff;">
+                                        US Agency <strong>Development Lead</strong>
+
+                                    </h3>
+                                    <div class="description">
+                                        <p>Pakistan</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
         <!-- content -->
@@ -437,8 +595,13 @@
 
 
                             <div class="mil-up">
-                                <a href="contact" class="mil-button mil-arrow-place">
-                                    <span>Connect with us now!</span>
+                                <a href="contact.html" class="mil-button mil-arrow-place"><span>Connect with us
+                                        now</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path
+                                            d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z">
+                                        </path>
+                                    </svg>
                                 </a>
                             </div>
                         </div>
@@ -512,43 +675,68 @@
     <script src="./inner-assets/js/plugins/ScrollTo.min.js"></script>
     <!-- ashley js -->
     <script src="./inner-assets/js/main.js"></script>
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--  Swiper Slider1 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function () {
                 document.body.style.opacity = '1';
             }, 1000);
         });
+        $(document).ready(function () {
+            $('.center').slick({
+                spaceBetween: 100,
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            // arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            // arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
     </script>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
             autoplay: {
-                delay: 1000,
+                delay: 1500,
             },
             pauseOnMouseFocus: false,
             direction: "vertical",
             slidesPerView: 3,
             spaceBetween: 30,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
         });
 
-        var swiper = new Swiper(".mySwiper2", {
-            pagination: {
-                el: ".swiper-pagination",
-                type: "fraction",
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
+
+
 
 
     </script>
