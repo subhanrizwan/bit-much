@@ -15,6 +15,8 @@
 
     <!-- bootstrap grid css -->
     <link rel="stylesheet" href="./inner-assets/css/plugins/bootstrap-grid.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- font awesome css -->
     <!-- <link rel="stylesheet" href="./inner-assets/css/plugins/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -41,7 +43,6 @@
         }
 
         body {
-            /* overflow-y: hidden; */
             position: relative;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
@@ -51,15 +52,14 @@
             padding: 0 15px 0 25px;
         }
 
-        .mil-menu-btn span:before,
         .mil-menu-btn span:after {
-            background: #fff !important;
+            background: #000 !important;
         }
 
         .coming-soon {
             width: 100%;
             height: 100vh;
-            background-color: #000;
+            background-color: #fff;
             display: flex;
             align-items: center;
         }
@@ -77,30 +77,23 @@
             color: #fff;
         }
 
-        #swupMain {
-            background-color: #000;
-        }
-
-
         .section1 {
             display: flex;
             margin-top: 6rem;
-            background: #000;
+            background: #fff;
             height: 100vh;
             width: 2400px;
-            padding-bottom: 5rem;
+            padding: 3rem 3rem 4rem 3rem;
         }
 
-        .row {
+        .parent-child {
             display: flex;
             flex-wrap: wrap;
             flex: 1;
+            margin-bottom: 6rem;
         }
 
         .child1 {
-            border-right: 1px solid gray;
-            /* position: static; */
-            /* background: #9e9e9e; */
             width: 50%;
             height: 85vh;
             padding: 40px;
@@ -110,33 +103,173 @@
         }
 
         .child2 {
+            border-left: 1px solid rgb(202, 202, 202);
             overflow-y: auto;
-            /* background: #e1e0e0; */
             width: 45%;
-            /* height: 1200px; */
             padding: 40px;
-            overflow-y: auto;
-            height: 100%;
+            height: 85vh;
 
         }
 
-
         #salesbtn {
+            text-decoration-line: none;
             text-align: left;
             padding: 0px 34px 0 35px;
             height: 50px;
         }
 
+        #salesbtn:hover {
+            color: #000;
+        }
 
+        a {
+            text-decoration-line: none !important;
+            color: #000;
+        }
 
+        a:hover {
+            color: #000;
+        }
+
+        /* footer css*/
         footer {
             position: relative;
             margin-top: auto;
         }
 
-        @media (max-width: 768px) {
-            .col-6 {
+        .mil-dark-bg .mi-invert-fix {
+            height: 100%;
+            position: relative;
+            pointer-events: none;
+            z-index: 3;
+            background: #000;
+        }
+
+
+        /* modal css */
+
+        .form-group {
+            gap: 3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .modal-content {
+            background: #191919;
+            color: #fff;
+        }
+
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: none;
+        }
+
+        .modal-title {
+            color: #fff;
+        }
+
+        .border-bottom-only {
+            border: none;
+            border-bottom: 1px solid #fff;
+            border-radius: 0;
+            /* background-color: transparent; */
+        }
+
+        .close {
+            float: right;
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1;
+            color: #fff;
+            text-shadow: 0 1px 0 #fff;
+            opacity: .5;
+        }
+
+        .field1 {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            gap: 3rem;
+            border: none;
+            box-shadow: none;
+        }
+
+        .modal-body {
+            position: relative;
+            -ms-flex: 1 1 auto;
+            flex: 1 0 auto;
+            padding: 2rem;
+            /* width: 100%; */
+        }
+
+        input:hover {
+            outline: none;
+            box-shadow: none;
+            border-color: inherit;
+        }
+
+        input {
+            text-transform: inherit;
+            position: relative;
+            height: 70px;
+            padding: 0 30px;
+            width: 100%;
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: 300;
+            font-family: "Outfit", sans-serif;
+            color: #fff;
+            border: none;
+            border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+
+        input:nth-of-type(n) {
+            color: #fff !important;
+        }
+
+        .form-control:focus {
+            border-color: none;
+            border-color: none;
+            box-shadow: none;
+        }
+
+        .form-control {
+            font-size: 0.8rem !important;
+            color: #fff;
+        }
+
+        input[type="text"] {
+            font-size: 0.5rem;
+        }
+
+        select {
+            background: #191919 !important;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #fff;
+            border-radius: 0;
+        }
+
+        @media(max-width:768px) {
+            .field1 {
+                display: flex;
+                justify-content: space-between;
                 flex-direction: column;
+
+            }
+        }
+
+        @media (max-width: 768px) {
+            .row.align-items-center {
+                flex-direction: column;
+            }
+
+            .col-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+                padding: 10px 0;
             }
         }
     </style>
@@ -308,10 +441,11 @@
 
         <!-- frame -->
         <div class="mil-frame">
-            <div class="mil-frame-top">
-                <a href="home" class="mil-logo" style="color: #fff;">A Bit Much</a>
+            <div class="mil-frame-top" style="background: transparent;">
+                <a href="home" class="mil-logo"
+                    style="color: #000; text-decoration-line: underline;text-decoration-line: none;">A Bit Much</a>
                 <div class="mil-menu-btn">
-                    <span style="background: #fff;"></span>
+                    <span style="background: #000;"></span>
                 </div>
             </div>
             <div class="mil-frame-bottom">
@@ -330,27 +464,29 @@
         <div class="mil-content">
             <div id="swupMain" class="mil-main-transition">
                 <div class="coming-soon flex justify-content-center align-items-start">
-                    <!-- container start-->
-                    <div class="section1 p-4">
-                        <div class="row mt-5">
+                    <!-- section start-->
+                    <div class="section1">
+                        <div class="row parent-child">
                             <div class="col-6 child1">
                                 <div class="title">
-                                    <h1 style="color: #fff; font-weight:normal;">Director of Sales</h1>
-                                    <h2 style="color: gray; ont-weight:normal;">Emerging & Scaled, NYC</h2>
+                                    <h1 style="color: #000; font-weight:normal;">Director of Sales</h1>
+                                    <h2 style="color: gray; font-weight:normal;">Emerging & Scaled, NYC</h2>
                                 </div>
                                 <div class="apply-now">
                                     <div class="mil-up"
                                         style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
-                                        <a href="careers-inner.html" class="mil-button mil-arrow-place"><span>Apply
-                                                Now</span>
+                                        <button class="mil-button mil-arrow-place" data-toggle="modal"
+                                            data-target="#exampleModalCenter">Apply Now
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                                 <path
                                                     d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z">
                                                 </path>
                                             </svg>
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
+
+
 
                             </div>
                             <div class="col-6 child2">
@@ -513,37 +649,10 @@
                                 </li><br>
 
 
-                                <a href="#Mission" class="mil-link mil-dark mil-arrow-place mil-down-arrow"
-                                    style="font-size:20px;">
-                                    <span>Our Mission and Vision</span>
-                                </a>
-                                <p class="mil-mb-60">At <b>A Bit Much Co.</b> we are committed to pushing the boundaries
-                                    of
-                                    technology and design. Our mission is to provide exceptional IT solutions, stunning
-                                    3D
-                                    animations, and captivating 2D art designs that help our clients achieve their
-                                    business
-                                    goals. We believe in the power of creativity and technology to transform ideas into
-                                    reality and drive success in the digital age.</p>
-                                <a href="#Mission" class="mil-link mil-dark mil-arrow-place mil-down-arrow"
-                                    style="font-size:20px;">
-                                    <span>Our Mission and Vision</span>
-                                </a>
-                                <p class="mil-mb-60">At <b>A Bit Much Co.</b> we are committed to pushing the boundaries
-                                    of
-                                    technology and design. Our mission is to provide exceptional IT solutions, stunning
-                                    3D
-                                    animations, and captivating 2D art designs that help our clients achieve their
-                                    business
-                                    goals. We believe in the power of creativity and technology to transform ideas into
-                                    reality and drive success in the digital age.</p>
-                                <a href="#Mission" class="mil-link mil-dark mil-arrow-place mil-down-arrow"
-                                    style="font-size:20px;">
-                                    <span>Our Mission and Vision</span>
-                                </a>
                             </div>
                         </div>
                     </div>
+                    <!-- section end-->
 
                 </div>
             </div>
@@ -559,7 +668,8 @@
         <div class="mi-invert-fix">
             <div class="container mil-p-120-60 pb-0">
                 <div class="row">
-                    <div class="col-lg-5 mil-mb-30 ">
+                    <div class="col-lg-5 mil-mb-30">
+
 
                         <div class="mil-muted cstm-logo-size mil-up mil-mb-30">
                             <h3>
@@ -630,6 +740,136 @@
         </div>
     </footer>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLongTitle">Fill in Apply</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <div class="field1">
+                                <input type="text" required
+                                    class="form-control rounded-0 bg-transparent border-bottom-only"
+                                    id="exampleInputName" aria-describedby="emailHelp"
+                                    placeholder="Enter Your Full Name">
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="field1">
+                                <input type="email" required
+                                    class="form-control rounded-0 bg-transparent  border-bottom-only"
+                                    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email">
+                                <input type="number" class="form-control rounded-0 bg-transparent  border-bottom-only"
+                                    id="exampleInputPassword" aria-describedby="emailHelp" placeholder="000-111102-25">
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="field1">
+                                <input type="text" required
+                                    class="form-control rounded-0 bg-transparent  border-bottom-only"
+                                    id="exampleInputStudy" aria-describedby="emailHelp"
+                                    placeholder="Area of Study/Degree">
+
+                                <input type="number" required min="1990" max="2030" step="1" value="2024"
+                                    class="form-control rounded-0 bg-transparent  border-bottom-only"
+                                    id="exampleInputGraduation" aria-describedby="emailHelp"
+                                    placeholder="Enter Your Year of Graduation">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="field1  mb-4" required>
+                                <select name="" id="" class="form-control rounded-0 border-bottom-only">
+                                    <option value="Others" selected disabled>Current Employed Status</option>
+                                    <option value="Student">Student</option>
+                                    <option value="Employed"> Employed</option>
+                                    <option value="Unemployed"> Unemployed</option>
+                                    <option value="Self-Employed"> Self-Employed</option>
+                                    <option value="Not Currently Seeking Work"> Not Currently Seeking Work</option>
+                                    <option value="Student"> Student</option>
+                                    <option value="Others"> Others</option>
+
+                                </select>
+                                <select name="" id="" class="form-control rounded-0  border-bottom-only" required>
+                                    <option value="Others" disabled selected>Skils</option>
+                                    <option value="Student"> Student</option>
+                                    <option value="Employed"> Employed</option>
+                                    <option value="Unemployed"> Unemployed</option>
+                                    <option value="Self-Employed"> Self-Employed</option>
+                                    <option value="Not Currently Seeking Work"> Not Currently Seeking Work</option>
+                                    <option value="Others"> Others</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="field1">
+                                <input type="text" class="form-control rounded-0 bg-transparent border-bottom-only"
+                                    required id="exampleInputCurCompany" aria-describedby="emailHelp"
+                                    placeholder="Enter Your Current Company">
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="field1">
+                                <input type="text" class="form-control rounded-0 bg-transparent  border-bottom-only"
+                                    id="exampleInputPassword" aria-describedby="emailHelp" required
+                                    placeholder="Reason for Leaving Job">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="field1">
+
+                                <select name="" id="" class="form-control rounded-0 bg-black border-bottom-only">
+                                    <option value="Others" selected disabled>Current Employed Status</option>
+                                    <option value="Student">Student</option>
+                                    <option value="Employed"> Employed</option>
+                                    <option value="Unemployed"> Unemployed</option>
+                                    <option value="Self-Employed"> Self-Employed</option>
+                                    <option value="Not Currently Seeking Work"> Not Currently Seeking Work</option>
+                                    <option value="Student"> Student</option>
+                                    <option value="Others"> Others</option>
+
+                                </select>
+                                <input type="file" class="form-control rounded-0 bg-transparent  border-bottom-only"
+                                    id="exampleInputStudy" aria-describedby="emailHelp" required
+                                    placeholder="Area of Study/Degree">
+
+
+                            </div>
+                        </div>
+                        <div class="form-check">
+
+                        </div>
+                        <div class="apply-now">
+                            <div class="mil-up"
+                                style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                <button class="mil-button mil-arrow-place" data-toggle="modal"
+                                    data-target="#exampleModalCenter">Submit
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path
+                                            d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <!-- wrapper end -->
 
     <!-- jQuery js -->
@@ -663,6 +903,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
         integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function () {
