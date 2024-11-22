@@ -19,6 +19,9 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- font awesome css -->
     <!-- <link rel="stylesheet" href="./inner-assets/css/plugins/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -161,7 +164,7 @@
         }
 
         .modal-header {
-            padding: 1.5rem;
+            padding: 2rem;
             border-bottom: none;
         }
 
@@ -169,12 +172,6 @@
             color: #fff;
         }
 
-        .border-bottom-only {
-            border: none;
-            border-bottom: 1px solid #fff;
-            border-radius: 0;
-            /* background-color: transparent; */
-        }
 
         .close {
             float: right;
@@ -186,22 +183,71 @@
             opacity: .5;
         }
 
+        .close span {
+            color: #fff;
+        }
+
         .field1 {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
-    border: none;
-    box-shadow: none;
-}
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            /* flex-direction: column; */
+            width: 100%;
+            gap: 1rem;
+            border: none;
+            box-shadow: none;
+            /* transition: width 2s; */
+        }
+
+        .field1-child {
+            width: 45%;
+            flex-direction: column;
+        }
+
+        .field1-child label {
+            font-size: 0.7rem;
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+        }
+
+        .border-bottom-only {
+            border: none;
+            border-bottom: 1px solid #fff;
+            border-radius: 0;
+            transition: width 3s;
+
+        }
+
+        .border-bottom-only::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            border-bottom: 1px solid rgb(255, 152, 0);
+            transition: width 3s;
+
+        }
+
+        .border-bottom-only:focus {
+            border-bottom: 1px solid rgb(255, 152, 0);
+            border-width: 100%;
+            color: #fff !important;
+        }
+
+        .border-bottom-only:not(:focus) {
+            width: 100%;
+        }
 
         .modal-body {
             position: relative;
             -ms-flex: 1 1 auto;
             flex: 1 0 auto;
             padding: 2rem;
-            /* width: 100%; */
         }
 
         input:hover {
@@ -216,18 +262,15 @@
             height: 70px;
             padding: 0 30px;
             width: 100%;
-            font-size: 12px;
+            font-size: 10px;
             letter-spacing: 2px;
             font-weight: 300;
             font-family: "Outfit", sans-serif;
             color: #fff;
             border: none;
-            border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+            border-bottom: none;
             margin-bottom: 30px;
-        }
-
-        input:nth-of-type(n) {
-            color: #fff !important;
+            transition: none !important;
         }
 
         .form-control:focus {
@@ -237,14 +280,18 @@
         }
 
         .form-control {
-            font-size: 0.8rem !important;
+            font-size: 0.7rem !important;
             color: #fff;
+            font-style: normal;
         }
 
-        input[type="text"] {
-            font-size: 0.5rem;
+        .file-input {
+            display: none;
         }
 
+
+
+        /* dropdown */
         select {
             background: #191919 !important;
             border: none;
@@ -252,31 +299,137 @@
             border-bottom: 1px solid #fff;
             border-radius: 0;
         }
+
+        /* esteric */
         .esteric {
-    /* margin-top: 54px; */
-    padding: 0.5em;
-    color: rgb(255, 152, 0);
-    font-weight: bold;
-}
-
-        @media(max-width:768px) {
-            .field1 {
-                display: flex;
-                justify-content: space-between;
-                flex-direction: column;
-
-            }
+            padding: 0.5em;
+            color: rgb(255, 152, 0);
+            font-weight: bold;
         }
 
-        @media (max-width: 768px) {
-            .row.align-items-center {
+        .field1 i {
+            font-size: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+
+
+        @media only screen and (max-width:991px) {
+            .parent-child {
                 flex-direction: column;
+            }
+
+            .section1 {
+                height: 100%;
+            }
+
+            .child1 {
+                width: 100%;
+                padding: 70px;
             }
 
             .col-6 {
-                flex: 0 0 100%;
                 max-width: 100%;
-                padding: 10px 0;
+            }
+
+            .child2 {
+                border-left: none;
+                width: 100%;
+                padding: 40px;
+                height: 85vh;
+            }
+        }
+
+        @media only screen and (max-width:830px) {
+            .parent-child {
+                flex-direction: row;
+            }
+
+            .section1 {
+                height: 100%;
+                margin-top: 3rem;
+            }
+
+            .child1 {
+                width: 100%;
+                height: 42%;
+                padding: 70px;
+                justify-content: start;
+            }
+
+            .col-6 {
+                -ms-flex: 0 0 50%;
+                flex: 0 0 100%;
+                /* max-width: 50%; */
+            }
+
+            .child2 {
+                border-left: none;
+                width: 100%;
+                padding: 40px;
+                height: 85vh;
+            }
+
+            .title h1,
+            h2 {
+                font-size: 3rem;
+            }
+        }
+
+        @media only screen and (max-width:768px) {
+            .parent-child {
+                flex-direction: row;
+            }
+
+            .section1 {
+                height: 100%;
+                margin-top: 3rem;
+            }
+
+            .child1 {
+                height: 37%;
+                height: 42%;
+                padding: 40px;
+                justify-content: start;
+            }
+
+            .col-6 {
+                -ms-flex: 0 0 50%;
+                flex: 0 0 100%;
+                /* max-width: 50%; */
+            }
+
+            .child2 {
+                border-left: none;
+                width: 100%;
+                padding: 40px;
+                height: 85vh;
+            }
+
+            .title h1,
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media only screen and (max-width: 540px) {
+
+            .title h1,
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+
+
+        @media(max-width:768px) {
+
+            .field1-child {
+                width: 100%;
+            }
+
+            .child1 {
+                height: 27%;
             }
         }
     </style>
@@ -751,7 +904,7 @@
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="exampleModalLongTitle">Fill in Apply</h4>
@@ -763,110 +916,157 @@
                     <form>
                         <div class="form-group">
                             <div class="field1">
-                                <label for="exampleInputEmail1">Full Name<span class="esteric">*</span></label>
-                                
-                                <input type="text" required
-                                    class="form-control rounded-0 bg-transparent border-bottom-only"
-                                    id="exampleInputName" aria-describedby="emailHelp"
-                                    placeholder="Enter Your Full Name">
+                                <div class="field1-child d-flex">
+                                    <label for="exampleInputEmail1"> Full Name<span class="esteric">*</span></label>
+                                    <input type="text" required
+                                        class="form-control rounded-0 bg-transparent border-bottom-only"
+                                        id="exampleInputName" aria-describedby="emailHelp"
+                                        placeholder="Enter Your Full Name">
+
+                                </div>
+                                <div class="field1-child d-flex">
+
+                                    <label for="exampleInputEmail1">Email Address <span class="esteric">*</span></label>
+                                    <input type="email" required
+                                        class="form-control rounded-0 bg-transparent  border-bottom-only"
+                                        id="exampleInputEmail1" aria-describedby="emailHelp"
+                                        placeholder="Enter Your Email">
+                                </div>
+
 
                             </div>
+
                         </div>
                         <div class="form-group">
                             <div class="field1">
-                                <label for="exampleInputEmail1">Email Address <span class="esteric">*</span></label>
-                                <input type="email" required
-                                    class="form-control rounded-0 bg-transparent  border-bottom-only"
-                                    id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email">
+                                <div class="field1-child d-flex">
                                     <label for="exampleInputEmail1">Phone Number<span class="esteric">*</span></label>
-                                <input type="number" class="form-control rounded-0 bg-transparent  border-bottom-only"
-                                    id="exampleInputNumber" aria-describedby="emailHelp" placeholder="000-111102-25">
-
+                                    <input id="number" type="number"
+                                        class="form-control rounded-0 bg-transparent  border-bottom-only"
+                                        id="exampleInputNumber" aria-describedby="emailHelp"
+                                        placeholder="000-111102-25">
+                                </div>
+                                <div class="field1-child d-flex">
+                                    <label for="exampleInputEmail1">Area of Study<span class="esteric">*</span></label>
+                                    <input type="text" required
+                                        class="form-control rounded-0 bg-transparent  border-bottom-only"
+                                        id="exampleInputStudy" aria-describedby="emailHelp"
+                                        placeholder="Area of Study/Degree">
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="field1">
-                                <label for="exampleInputEmail1">Area of Study<span class="esteric">*</span></label>
-                                <input type="text" required
-                                    class="form-control rounded-0 bg-transparent  border-bottom-only"
-                                    id="exampleInputStudy" aria-describedby="emailHelp"
-                                    placeholder="Area of Study/Degree">
-                                    <label for="exampleInputEmail1">Graduation Year<span class="esteric">*</span></label>
-                                <input type="number" required min="1990" max="2030" step="1" value="2024"
-                                    class="form-control rounded-0 bg-transparent  border-bottom-only"
-                                    id="exampleInputGraduation" aria-describedby="emailHelp"
-                                    placeholder="Enter Your Year of Graduation">
+                                <div class="field1-child d-flex">
+                                    <label for="exampleInputEmail1">Graduation Year<span
+                                            class="esteric">*</span></label>
+                                    <input id="number" type="number" required min="1990" max="2030" step="1"
+                                        value="2024" class="form-control rounded-0 bg-transparent  border-bottom-only"
+                                        id="exampleInputGraduation" aria-describedby="emailHelp"
+                                        placeholder="Enter Your Year of Graduation">
+                                </div>
+                                <div class="field1-child d-flex">
+                                    <label for="exampleInputEmail1">Current Employed Status<span
+                                            class="esteric">*</span></label>
+                                    <select name="" id="" class="form-control rounded-0 border-bottom-only">
+                                        <option value="Others" selected disabled>Select</option>
+                                        <option value="Student">Student</option>
+                                        <option value="Employed"> Employed</option>
+                                        <option value="Unemployed"> Unemployed</option>
+                                        <option value="Self-Employed"> Self-Employed</option>
+                                        <option value="Not Currently Seeking Work"> Not Currently Seeking Work</option>
+                                        <option value="Student"> Student</option>
+                                        <option value="Others"> Others</option>
+
+                                    </select>
+                                </div>
+
 
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <div class="field1  mb-4" required>
-                                <label for="exampleInputEmail1">Current Employed Status<span class="esteric">*</span></label>
-                                <select name="" id="" class="form-control rounded-0 border-bottom-only">
-                                    <option value="Others" selected disabled>Current Employed Status</option>
-                                    <option value="Student">Student</option>
-                                    <option value="Employed"> Employed</option>
-                                    <option value="Unemployed"> Unemployed</option>
-                                    <option value="Self-Employed"> Self-Employed</option>
-                                    <option value="Not Currently Seeking Work"> Not Currently Seeking Work</option>
-                                    <option value="Student"> Student</option>
-                                    <option value="Others"> Others</option>
+                            <div class="field1  mb-4">
+                                <div class="field1-child d-flex">
+                                    <label for="exampleInputSkills">Skils<span class="esteric">*</span></label>
+                                    <input type="text" class="form-control rounded-0 bg-transparent border-bottom-only"
+                                        id="exampleInputSkills" aria-describedby="emailHelp"
+                                        placeholder="Type your Skills">
+                                    <!-- <label for="exampleInputEmail1">Skils<span class="esteric">*</span></label>
+                                    <select name="" id="" class="form-control rounded-0  border-bottom-only" required>
+                                        <option value="Others" disabled selected>Select</option>
+                                        <option value="Student"> Student</option>
+                                        <option value="Employed"> Employed</option>
+                                        <option value="Unemployed"> Unemployed</option>
+                                        <option value="Self-Employed"> Self-Employed</option>
+                                        <option value="Not Currently Seeking Work"> Not Currently Seeking Work</option>
+                                        <option value="Others"> Others</option>
+                                    </select> -->
+                                </div>
+                                <div class="field1-child d-flex">
 
-                                </select>
-                                <label for="exampleInputEmail1">Skils<span class="esteric">*</span></label>
-
-                                <select name="" id="" class="form-control rounded-0  border-bottom-only" required>
-                                    <option value="Others" disabled selected>Skils</option>
-                                    <option value="Student"> Student</option>
-                                    <option value="Employed"> Employed</option>
-                                    <option value="Unemployed"> Unemployed</option>
-                                    <option value="Self-Employed"> Self-Employed</option>
-                                    <option value="Not Currently Seeking Work"> Not Currently Seeking Work</option>
-                                    <option value="Others"> Others</option>
-                                </select>
+                                    <label for="exampleInputEmail1">Current Company<span
+                                            class="esteric">*</span></label>
+                                    <input type="text" class="form-control rounded-0 bg-transparent border-bottom-only"
+                                        required id="exampleInputCurCompany" aria-describedby="emailHelp"
+                                        placeholder="Enter Your Current Company">
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="field1">
-                                <input type="text" class="form-control rounded-0 bg-transparent border-bottom-only"
-                                    required id="exampleInputCurCompany" aria-describedby="emailHelp"
-                                    placeholder="Enter Your Current Company">
+                            <div class="field1  mb-4">
+                                <div class="field1-child d-flex">
 
+                                    <label for="exampleInputEmail1">Reason for Leaving Job<span
+                                            class="esteric">*</span></label>
+
+                                    <input type="text" class="form-control rounded-0 bg-transparent  border-bottom-only"
+                                        id="exampleInputPassword" aria-describedby="emailHelp" required
+                                        placeholder="Reason for Leaving Job">
+                                </div>
+                                <div class="field1-child d-flex">
+
+                                    <label for="exampleInputJoining">How soon can you join us?<span
+                                            class="esteric">*</span></label>
+                                    <select class="form-control rounded-2 border-bottom-only">
+                                        <option value="" selected disabled>Select</option>
+                                        <option value="Immediately">Immediately</option>
+                                        <option value="Employed"> Employed</option>
+                                        <option value="Unemployed"> Unemployed</option>
+                                        <option value="Self-Employed"> Self-Employed</option>
+                                        <option value="Not Currently Seeking Work"> Not Currently Seeking Work</option>
+                                        <option value="Student"> Student</option>
+                                        <option value="InOneMonth"> In One Month</option>
+                                        <option value="AsSoonAsPossible"> As Soon As Possible</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <div class="field1">
-                                <label for="exampleInputEmail1">Reason for Leaving Job<span class="esteric">*</span></label>
-
-                                <input type="text" class="form-control rounded-0 bg-transparent  border-bottom-only"
-                                    id="exampleInputPassword" aria-describedby="emailHelp" required
-                                    placeholder="Reason for Leaving Job">
+                            <div class="field1  mb-4">
+                                <div class="field1-child d-flex">
+                                    <label for="file-upload"
+                                        class="custom-file-upload mil-button mil-arrow-place rounded-0">Upload Resume <i
+                                            class="fa-solid fa-cloud-arrow-up"></i> </label>
+                                    <input id="file-upload" type="file"
+                                        class="form-control rounded-0 bg-transparent  border-bottom-only file-input"
+                                        id="exampleInputStudy" aria-describedby="emailHelp" required
+                                        placeholder="Area of Study/Degree">
+                                </div>
+                                <div class="field1-child d-flex">
+                                    <label for="file-upload"
+                                        class="custom-file-upload mil-button mil-arrow-place rounded-0  ">Additional
+                                        Documents <i class="fa-solid fa-file-import"></i></label>
+                                    <input id="file-upload" type="file"
+                                        class="form-control rounded-0 bg-transparent  border-bottom-only file-input"
+                                        id="exampleInputStudy" aria-describedby="emailHelp" required
+                                        placeholder="Area of Study/Degree">
+                                </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="field1">
-                                <label for="exampleInputEmail1">Current Employed Status<span class="esteric">*</span></label>
-                                <select name="" id="" class="form-control rounded-0 bg-black border-bottom-only">
-                                    <option value="Others" selected disabled>Current Employed Status</option>
-                                    <option value="Student">Student</option>
-                                    <option value="Employed"> Employed</option>
-                                    <option value="Unemployed"> Unemployed</option>
-                                    <option value="Self-Employed"> Self-Employed</option>
-                                    <option value="Not Currently Seeking Work"> Not Currently Seeking Work</option>
-                                    <option value="Student"> Student</option>
-                                    <option value="Others"> Others</option>
-
-                                </select><br>
-                               <!-- <label for="exampleInputEmail1">Current Employed Status<span class="esteric">*</span></label> -->
-                                <!-- <input type="file" class="form-control rounded-0 bg-transparent  border-bottom-only" -->
-                                    <!-- id="exampleInputStudy" aria-describedby="emailHelp" required -->
-                                    <!-- placeholder="Area of Study/Degree"> -->
 
 
-                            </div>
-                        </div>
-                        
                         <div class="apply-now">
                             <div class="mil-up"
                                 style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
