@@ -187,13 +187,14 @@
         }
 
         .field1 {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            gap: 3rem;
-            border: none;
-            box-shadow: none;
-        }
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    border: none;
+    box-shadow: none;
+}
 
         .modal-body {
             position: relative;
@@ -251,6 +252,12 @@
             border-bottom: 1px solid #fff;
             border-radius: 0;
         }
+        .esteric {
+    /* margin-top: 54px; */
+    padding: 0.5em;
+    color: rgb(255, 152, 0);
+    font-weight: bold;
+}
 
         @media(max-width:768px) {
             .field1 {
@@ -756,6 +763,8 @@
                     <form>
                         <div class="form-group">
                             <div class="field1">
+                                <label for="exampleInputEmail1">Full Name<span class="esteric">*</span></label>
+                                
                                 <input type="text" required
                                     class="form-control rounded-0 bg-transparent border-bottom-only"
                                     id="exampleInputName" aria-describedby="emailHelp"
@@ -765,21 +774,24 @@
                         </div>
                         <div class="form-group">
                             <div class="field1">
+                                <label for="exampleInputEmail1">Email Address <span class="esteric">*</span></label>
                                 <input type="email" required
                                     class="form-control rounded-0 bg-transparent  border-bottom-only"
                                     id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email">
+                                    <label for="exampleInputEmail1">Phone Number<span class="esteric">*</span></label>
                                 <input type="number" class="form-control rounded-0 bg-transparent  border-bottom-only"
-                                    id="exampleInputPassword" aria-describedby="emailHelp" placeholder="000-111102-25">
+                                    id="exampleInputNumber" aria-describedby="emailHelp" placeholder="000-111102-25">
 
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="field1">
+                                <label for="exampleInputEmail1">Area of Study<span class="esteric">*</span></label>
                                 <input type="text" required
                                     class="form-control rounded-0 bg-transparent  border-bottom-only"
                                     id="exampleInputStudy" aria-describedby="emailHelp"
                                     placeholder="Area of Study/Degree">
-
+                                    <label for="exampleInputEmail1">Graduation Year<span class="esteric">*</span></label>
                                 <input type="number" required min="1990" max="2030" step="1" value="2024"
                                     class="form-control rounded-0 bg-transparent  border-bottom-only"
                                     id="exampleInputGraduation" aria-describedby="emailHelp"
@@ -790,6 +802,7 @@
 
                         <div class="form-group">
                             <div class="field1  mb-4" required>
+                                <label for="exampleInputEmail1">Current Employed Status<span class="esteric">*</span></label>
                                 <select name="" id="" class="form-control rounded-0 border-bottom-only">
                                     <option value="Others" selected disabled>Current Employed Status</option>
                                     <option value="Student">Student</option>
@@ -801,6 +814,8 @@
                                     <option value="Others"> Others</option>
 
                                 </select>
+                                <label for="exampleInputEmail1">Skils<span class="esteric">*</span></label>
+
                                 <select name="" id="" class="form-control rounded-0  border-bottom-only" required>
                                     <option value="Others" disabled selected>Skils</option>
                                     <option value="Student"> Student</option>
@@ -822,6 +837,8 @@
                         </div>
                         <div class="form-group">
                             <div class="field1">
+                                <label for="exampleInputEmail1">Reason for Leaving Job<span class="esteric">*</span></label>
+
                                 <input type="text" class="form-control rounded-0 bg-transparent  border-bottom-only"
                                     id="exampleInputPassword" aria-describedby="emailHelp" required
                                     placeholder="Reason for Leaving Job">
@@ -829,7 +846,7 @@
                         </div>
                         <div class="form-group">
                             <div class="field1">
-
+                                <label for="exampleInputEmail1">Current Employed Status<span class="esteric">*</span></label>
                                 <select name="" id="" class="form-control rounded-0 bg-black border-bottom-only">
                                     <option value="Others" selected disabled>Current Employed Status</option>
                                     <option value="Student">Student</option>
@@ -840,17 +857,16 @@
                                     <option value="Student"> Student</option>
                                     <option value="Others"> Others</option>
 
-                                </select>
-                                <input type="file" class="form-control rounded-0 bg-transparent  border-bottom-only"
-                                    id="exampleInputStudy" aria-describedby="emailHelp" required
-                                    placeholder="Area of Study/Degree">
+                                </select><br>
+                               <!-- <label for="exampleInputEmail1">Current Employed Status<span class="esteric">*</span></label> -->
+                                <!-- <input type="file" class="form-control rounded-0 bg-transparent  border-bottom-only" -->
+                                    <!-- id="exampleInputStudy" aria-describedby="emailHelp" required -->
+                                    <!-- placeholder="Area of Study/Degree"> -->
 
 
                             </div>
                         </div>
-                        <div class="form-check">
-
-                        </div>
+                        
                         <div class="apply-now">
                             <div class="mil-up"
                                 style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
